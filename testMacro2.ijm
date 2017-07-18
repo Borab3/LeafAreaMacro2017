@@ -18,4 +18,4 @@ run("Convert to Mask");
 run("Apply LUT"); //applys minimum and maximum values
 run("Close"); //closes the threshold menu
 run("Analyze Particles...", "size=0.15-Infinity show=Outlines display clear include"); //finds particles. include means include holes
-close("\\Others") //not included for testing purposes
+close("\\Others") //comment out to retain the window with the threshold
