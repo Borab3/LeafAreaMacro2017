@@ -15,9 +15,9 @@ run( "Apply LUT" ); //applys minimum and maximum values
 run("Close"); //closes the brightness and contrast menu
 setAutoThreshold("Default");
 run("Threshold..."); //opens the threshold menu
-setThreshold(0, 200);
+setThreshold(0, 150);
 setOption("BlackBackground", false); //more threshold options
 run("Convert to Mask");
 run("Close"); //closes the threshold menu
-run("Analyze Particles...", "size=0.15-Infinity show=Outlines display clear include"); //finds particles. include means include holes
+run("Analyze Particles...", "size=0.15-Infinity show=Outlines display clear"); //finds particles. include means include holes
 close("\\Others") //comment out to retain the window with the threshold
