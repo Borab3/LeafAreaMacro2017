@@ -1,4 +1,4 @@
-//Nadiv's Leaf Area Analysis Macro Version 2.8
+//Nadiv's Leaf Area Analysis Macro Version 3.0
 
 if (getHeight > 3300) { //test code for checking if the image height resolution is larger than the smaller scans
 	run("Set Scale...", "distance=240 known=1 pixel=0 unit=cm"); //sets the scale of the image
@@ -9,9 +9,9 @@ if (getHeight > 3300) { //test code for checking if the image height resolution 
 }
 run("Crop");
 run("8-bit"); //converts to b/w
-setMinAndMax(145, 225) //minimum and maximum for contrast
+setMinAndMax(145, 225); //minimum and maximum for contrast
 run("Brightness/Contrast...");
-run("Apply LUT"); //applys minimum and maximum values
+run( "Apply LUT" ); //applys minimum and maximum values
 run("Close"); //closes the brightness and contrast menu
 setAutoThreshold("Default");
 run("Threshold..."); //opens the threshold menu
@@ -20,4 +20,4 @@ setOption("BlackBackground", false); //more threshold options
 run("Convert to Mask");
 run("Close"); //closes the threshold menu
 run("Analyze Particles...", "size=0.15-Infinity show=Outlines display clear include"); //finds particles. include means include holes
-//close("\\Others") //comment out to retain the window with the threshold
+close("\\Others") //comment out to retain the window with the threshold
